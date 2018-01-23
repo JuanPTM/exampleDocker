@@ -1,0 +1,11 @@
+version: '2'
+services:
+  bar:
+    build:
+      context: .
+    ports:
+     - "5001:5000"
+    links:
+     - redisBar
+  redisBar:
+    image: "redis:alpine"
